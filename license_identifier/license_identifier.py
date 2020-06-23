@@ -393,7 +393,7 @@ class PostProcessor(object):
         return stripped_file_lines
 
     def _get_language(self, input_filepath):
-        __, ext = splitext(input_filepath)
+        __, ext = os.path.splitext(input_filepath)
 
         return comment_filter.language.extension_to_lang_map.get(ext, None)
 
